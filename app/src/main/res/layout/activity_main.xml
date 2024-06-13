@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@color/background"
+    android:paddingHorizontal="@dimen/regular1"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/main_managementBookCataloging"
+        android:layout_marginTop="@dimen/regular1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quản lí biên mục sách"
+        android:textSize="@dimen/regular1"
+        android:paddingVertical="@dimen/regular1"
+        android:fontFamily="@font/opensans_bold"/>
+    <Button
+        android:id="@+id/main_managementBookSummary"
+        android:layout_marginTop="@dimen/regular1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quản lí toán tắt sách"
+        android:textSize="@dimen/regular1"
+        android:paddingVertical="@dimen/regular1"
+        android:fontFamily="@font/opensans_bold"/>
+    <Button
+        android:id="@+id/main_managementBooks"
+        android:layout_marginTop="@dimen/regular1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quản lí sách"
+        android:textSize="@dimen/regular1"
+        android:paddingVertical="@dimen/regular1"
+        android:fontFamily="@font/opensans_bold"/>
+
+</LinearLayout>
