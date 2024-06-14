@@ -38,4 +38,82 @@
         android:paddingVertical="@dimen/regular1"
         android:fontFamily="@font/opensans_bold"/>
 
+
+
+
+    <Button
+        android:id="@+id/btnMsTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:height="40dp"
+        android:background="@drawable/background_input"
+        android:text="Quản lý mượn sách"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/black" />
+
+    <Button
+        android:id="@+id/btnTsTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:height="40dp"
+        android:background="@drawable/background_input"
+        android:text="Quản lý trả sách"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/black" />
+
+    <Button
+        android:id="@+id/btnDtTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:height="40dp"
+        android:background="@drawable/background_input"
+        android:text="Đốc thúc hạn trả"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/black" />
+
+    <Button
+        android:id="@+id/btnPsTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:height="40dp"
+        android:background="@drawable/background_input"
+        android:text="Phạt trả sách muộn"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/black" />
+
+    <Button
+        android:id="@+id/btnDxTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:height="40dp"
+        android:background="@drawable/background_input"
+        android:text="Đăng xuất"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/black" />
 </LinearLayout>
