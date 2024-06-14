@@ -15,6 +15,27 @@
         android:theme="@style/Theme.QuanLyThuVien"
         tools:targetApi="31">
         <activity
+            android:name=".ListViewSachActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThanhToanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TraSachActivity"
+            android:exported="false" />
+        <activity
+            android:name=".XemThongTinBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NhapMuonSachActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DangKyMuonSachActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GiaoDienBanDocActivity"
+            android:exported="false" />
+        <activity
             android:name=".BookSummaryManagement"
             android:exported="false" />
         <activity

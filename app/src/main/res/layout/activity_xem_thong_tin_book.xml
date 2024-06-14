@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".XemThongTinBookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/regular3">
+        <ImageButton
+            android:id="@+id/btnback"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:paddingLeft="@dimen/regular1"
+            android:paddingTop="@dimen/regular4"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/chevron_left"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/regular2"
+            android:fontFamily="@font/opensans_bold"
+            android:text="THÔNG TIN SÁCH"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="@dimen/title3" />
+    </LinearLayout>
+
+    <!-- Code tạo các text view để hiển thị thông tin sách-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Mã sách : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twmasach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" MS1"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Tên sách : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twtensach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" Triết học"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Tên tác giả : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twtentacgia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" Nguyễn Văn Tài"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Tiêu đề : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twtieude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" Giáo trình"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Nhà xuất bản : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twnhaxuatban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" Đại học Sư Phạm"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Năm xuất bản : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twnamxuatban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" 2015"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Ngôn ngữ : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twngonngu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" Tiếng Việt"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Thể loại : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twtheloai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="  Tài liệu giáo trình"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Giá thuê : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twgiathue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" 15.000 VNĐ"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Tình trạng : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twtinhtrang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" Trống"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/regular2"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint="Đánh giá : "
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+        <TextView
+            android:id="@+id/twdanhgia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:hint=" Tốt"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/regular2" />
+    </LinearLayout>
+</LinearLayout>
