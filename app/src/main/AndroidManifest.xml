@@ -15,6 +15,21 @@
         android:theme="@style/Theme.QuanLyThuVien"
         tools:targetApi="31">
         <activity
+            android:name=".ThuHoiTheBanDocActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThemThongTinBanDocActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CapTheBanDocActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CapNhatThongTinBanDocActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SQLHepler.ThemThongTinBanDoc"
+            android:exported="false" />
+        <activity
             android:name=".BookSummaryManagement"
             android:exported="false" />
         <activity
