@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.quanlythuvien.DataManagement.InfReader;
 import com.example.quanlythuvien.SQLHepler.SQLManagement;
@@ -17,7 +18,7 @@ public class ThemThongTinBanDocActivity extends AppCompatActivity {
     // Khai bao id
     ImageButton btnback; // khai bao imagebutton back
     Button btnthemthongtinbd; // khai báo btn thêm tt
-    TextInputEditText edtmabandocttt,edthotenttt, edtlopttt, edtsdtttt, edtdiachittt, edtmsvttt, edtkhoavienttt; // khai báo id thêm tt
+    TextInputEditText edtmabandocttt,edthotenttt, edtlopttt, edtsdtttt, edtdiachittt, edtkhoavienttt; // khai báo id thêm tt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,15 +44,20 @@ public class ThemThongTinBanDocActivity extends AppCompatActivity {
                 String lopHC = edtlopttt.getText().toString();
                 String SDT = edtsdtttt.getText().toString();
                 String diachi = edtdiachittt.getText().toString();
-                String maSinhVien = edtmsvttt.getText().toString();
                 String khoa = edtkhoavienttt.getText().toString();
-                // gọi tới hàm insertTTBD trong InfReader của datamanagement
-//                try {
-//                    InfReader.insertTTBD(IDThemTT,hoten,lopHC,SDT,diachi,maSinhVien,khoa);
-//                }
-//                catch (SQLException e) {
-//                    throw new RuntimeException(e);
-//                }
+                 //gọi tới hàm insertTTBD trong InfReader của datamanagement
+                try {
+                    InfReader.insertTTBD(IDThemTT,hoten,lopHC,SDT,diachi,khoa);
+                }
+                catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                if(IDThemTT.length()>0 && hoten.length()>0 && lopHC.length()>0 && SDT.length()>0 && diachi.length()>0 && khoa.length()>0 ){
+                    Toast.makeText(ThemThongTinBanDocActivity.this, "Nhập thông tin thành công", Toast.LENGTH_SHORT).show();
+                    finish();
+                }else {
+                    Toast.makeText(ThemThongTinBanDocActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                }
                 finish();
             }
         });
@@ -68,7 +74,6 @@ public class ThemThongTinBanDocActivity extends AppCompatActivity {
         edtlopttt = findViewById(R.id.edtlopttt);
         edtsdtttt = findViewById(R.id.edtsdtttt);
         edtdiachittt = findViewById(R.id.edtdiachittt);
-        edtmsvttt = findViewById(R.id.edtmsvcn);
         edtkhoavienttt = findViewById(R.id.edtkhoavienttt);
     }
 }

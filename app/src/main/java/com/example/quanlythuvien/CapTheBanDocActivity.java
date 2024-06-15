@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.quanlythuvien.DataManagement.CardPeople;
 import com.example.quanlythuvien.DataManagement.CardPeople;
@@ -74,6 +75,12 @@ public class CapTheBanDocActivity extends AppCompatActivity {
                     CardPeople.insertTheBanDoc(mathe,mabandoc,ngaydangky,nguoidangky,trangthai);
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
+                }
+                if(mathe.length()>0 && mabandoc.length()>0 && ngaydangky.length() != 0 && nguoidangky.length()>0 && trangthai.length()>0 ){
+                    Toast.makeText(CapTheBanDocActivity.this, "Nhập thông tin thành công", Toast.LENGTH_SHORT).show();
+                    finish();
+                }else {
+                    Toast.makeText(CapTheBanDocActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
                 finish();
             }

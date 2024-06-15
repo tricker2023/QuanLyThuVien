@@ -60,7 +60,7 @@
                 android:background="@drawable/background_input"
                 android:ems="10"
                 android:hint="Mã bạn đọc"
-                android:inputType="number"
+                android:inputType="text"
                 android:maxLength="10"
                 android:textColorHint="@color/text"
                 android:textSize="@dimen/regular2" />

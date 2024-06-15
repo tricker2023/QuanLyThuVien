@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.quanlythuvien.DataManagement.InfReader;
 import com.google.android.material.textfield.TextInputEditText;
@@ -17,7 +18,7 @@ public class CapNhatThongTinBanDocActivity extends AppCompatActivity {
     // Khai bao id
     ImageButton btnback; // khai bao imagebutton back
     Button btncapnhatthongtinbd,btnxoathongtinbd; // khai báo btn cập nhật , xóa TT bạn đọc
-    TextInputEditText edthotencn, edtsdtcn, edtdiachicn, edtlopcn, edtkhoaviencn,edtmabandoccn,edtmsvcn; // khai báo id cập nhật TT bạn đọc
+    TextInputEditText edthotencn, edtsdtcn, edtdiachicn, edtlopcn, edtkhoaviencn,edtmabandoccn; // khai báo id cập nhật TT bạn đọc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +49,6 @@ public class CapNhatThongTinBanDocActivity extends AppCompatActivity {
         edtlopcn = findViewById(R.id.edtlopcn);
         edtkhoaviencn = findViewById(R.id.edtkhoaviencn);
         edtmabandoccn = findViewById(R.id.edtmabandoccn);
-        edtmsvcn = findViewById(R.id.edtmsvcn);
 
     }
 
@@ -63,6 +63,12 @@ public class CapNhatThongTinBanDocActivity extends AppCompatActivity {
                     InfReader.deleteTTBD(IDThemTT);
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
+                }
+                if(IDThemTT.length()>0 ){
+                    Toast.makeText(CapNhatThongTinBanDocActivity.this, "Xóa thông tin thành công", Toast.LENGTH_SHORT).show();
+                    finish();
+                }else {
+                    Toast.makeText(CapNhatThongTinBanDocActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
                 finish();
             }
@@ -85,6 +91,13 @@ public class CapNhatThongTinBanDocActivity extends AppCompatActivity {
                     InfReader.updateTTBD(IDThemTT, hoten, lopHC,khoa,diachi,SDT);
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
+                }
+
+                if(IDThemTT.length()>0 && hoten.length()>0 && lopHC.length()>0 && SDT.length()>0 && diachi.length()>0 && khoa.length()>0 ){
+                    Toast.makeText(CapNhatThongTinBanDocActivity.this, "Cập nhật thông tin thành công", Toast.LENGTH_SHORT).show();
+                    finish();
+                }else {
+                    Toast.makeText(CapNhatThongTinBanDocActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
                 finish();
             }

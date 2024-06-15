@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button managementBookCataloging, managementBookSummary, managementBooks;
 
     private Button btnMsTC, btnTsTC, btnDtTC, btnPsTC;
-    private Button btncapthe, btnthuhoithe, btncapnhatthongtinbd;
+    private Button btncapthe, btnthuhoithe, btncapnhatthongtinbd, btnthemthongtinbd;
     private Button btnxemThongtin, btndangkyms, btntrasach, btnthanhtoan, btnlogout;
     private SharedPreferences sharedPreferences;
     private String position;
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         }else if(position.equals("Quản lí thẻ")){
             btncapthe.setVisibility(View.VISIBLE);
             btnthuhoithe.setVisibility(View.VISIBLE);
+            btnthemthongtinbd.setVisibility(View.VISIBLE);
             btncapnhatthongtinbd.setVisibility(View.VISIBLE);
         }else{
             btnxemThongtin.setVisibility(View.VISIBLE);
@@ -65,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
 
         btncapthe = findViewById(R.id.btncapthett);
         btnthuhoithe = findViewById(R.id.btnthuhoithett);
+        btnthemthongtinbd = findViewById(R.id.btnthemthongtinbd);
         btncapnhatthongtinbd = findViewById(R.id.btncapnhatthongtinbdtt);
+
 
         btnxemThongtin = findViewById(R.id.btnxemThongtin);
         btndangkyms = findViewById(R.id.btndangkyms);
@@ -148,6 +151,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ThuHoiTheBanDocActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnthemthongtinbd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ThemThongTinBanDocActivity.class);
                 startActivity(intent);
             }
         });
