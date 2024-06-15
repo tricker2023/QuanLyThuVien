@@ -15,6 +15,30 @@
         android:theme="@style/Theme.QuanLyThuVien"
         tools:targetApi="31">
         <activity
+            android:name=".XemThongTinPhat"
+            android:exported="false" />
+        <activity
+            android:name=".XemThongTinDocThuc"
+            android:exported="false" />
+        <activity
+            android:name=".XemThongTinTraSach"
+            android:exported="false" />
+        <activity
+            android:name=".XemThongTinMuonSach"
+            android:exported="false" />
+        <activity
+            android:name=".phatTraSachMuon"
+            android:exported="false" />
+        <activity
+            android:name=".docthuc"
+            android:exported="false" />
+        <activity
+            android:name=".TrangChuQlyTraSach"
+            android:exported="false" />
+        <activity
+            android:name=".TrangChuQlyMuonSach"
+            android:exported="false" />
+        <activity
             android:name=".BookSummaryManagement"
             android:exported="false" />
         <activity
