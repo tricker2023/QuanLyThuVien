@@ -31,203 +31,171 @@
             android:text="TRƯỜNG ĐẠI HỌC TÀI CHÍNH NGÂN HÀNG HÀ NỘI" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/main_managementBookCataloging"
-        android:layout_marginTop="@dimen/regular1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Quản lí biên mục sách"
-        android:textSize="@dimen/regular1"
-        android:paddingVertical="@dimen/regular1"
-        android:fontFamily="@font/opensans_bold"/>
-    <Button
-        android:id="@+id/main_managementBookSummary"
-        android:layout_marginTop="@dimen/regular1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Quản lí toán tắt sách"
-        android:textSize="@dimen/regular1"
-        android:paddingVertical="@dimen/regular1"
-        android:fontFamily="@font/opensans_bold"/>
-    <Button
-        android:id="@+id/main_managementBooks"
-        android:layout_marginTop="@dimen/regular1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Quản lí sách"
-        android:textSize="@dimen/regular1"
-        android:paddingVertical="@dimen/regular1"
-        android:fontFamily="@font/opensans_bold"/>
-    <Button
-        android:id="@+id/btnxemThongtin"
-        android:layout_width="221dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/regular1"
-        android:background="@drawable/custom_button"
-        android:hint="Xem thông tin sách"
-        android:textColorHint="@color/text2"
-        android:textSize="@dimen/regular2"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:id="@+id/btndangkyms"
-        android:layout_width="221dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/regular1"
-        android:background="@drawable/custom_button"
-        android:hint="Đăng ký mượn sách"
-        android:textColorHint="@color/text2"
-        android:textSize="@dimen/regular2"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:id="@+id/btntrasach"
-        android:layout_width="221dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/regular1"
-        android:background="@drawable/custom_button"
-        android:hint="Trả sách"
-        android:textColorHint="@color/text2"
-        android:textSize="@dimen/regular2"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:id="@+id/btnthanhtoan"
-        android:layout_width="221dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/regular1"
-        android:background="@drawable/custom_button"
-        android:hint="Thanh toán"
-        android:textColorHint="@color/text2"
-        android:textSize="@dimen/regular2"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:id="@+id/btnlogout"
-        android:layout_width="221dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/regular1"
-        android:background="@drawable/custom_button"
-        android:hint="Đăng xuất"
-        android:textColorHint="@color/text2"
-        android:textSize="@dimen/regular2"
-        app:backgroundTint="@null" />
-
-<<<<<<< HEAD
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/regular3">
+            <Button
+                android:id="@+id/main_managementBookCataloging"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quản lí biên mục sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/main_managementBookSummary"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quản lí toán tắt sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/main_managementBooks"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quản lí sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnxemThongtin"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xem thông tin sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btndangkyms"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký mượn sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btntrasach"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trả sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnthanhtoan"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thanh toán"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
 
 
-
-    <Button
-        android:id="@+id/btnMsTC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:height="40dp"
-        android:background="@drawable/background_input"
-        android:text="Quản lý mượn sách"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/black" />
-
-    <Button
-        android:id="@+id/btnTsTC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:height="40dp"
-        android:background="@drawable/background_input"
-        android:text="Quản lý trả sách"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/black" />
-
-    <Button
-        android:id="@+id/btnDtTC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:height="40dp"
-        android:background="@drawable/background_input"
-        android:text="Đốc thúc hạn trả"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/black" />
-
-    <Button
-        android:id="@+id/btnPsTC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:height="40dp"
-        android:background="@drawable/background_input"
-        android:text="Phạt trả sách muộn"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/black" />
-
-    <Button
-        android:id="@+id/btnDxTC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:height="40dp"
-        android:background="@drawable/background_input"
-        android:text="Đăng xuất"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/black" />
-=======
-    <Button
-        android:id="@+id/btncapthett"
-        android:layout_marginTop="@dimen/regular1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cấp thẻ bạn đọc"
-        android:textSize="@dimen/regular1"
-        android:paddingVertical="@dimen/regular1"
-        android:fontFamily="@font/opensans_bold"/>
-
-    <Button
-        android:id="@+id/btnthuhoithett"
-        android:layout_marginTop="@dimen/regular1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thu hồi thẻ bạn đọc"
-        android:textSize="@dimen/regular1"
-        android:paddingVertical="@dimen/regular1"
-        android:fontFamily="@font/opensans_bold"/>
+            <Button
+                android:id="@+id/btnMsTC"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quản lý mượn sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnTsTC"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quản lý trả sách"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnDtTC"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đốc thúc hạn trả"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnPsTC"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phạt trả sách muộn"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
 
 
-    <Button
-        android:id="@+id/btncapnhatthongtinbdtt"
-        android:layout_marginTop="@dimen/regular1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cập nhật thông tin bạn đọc"
-        android:textSize="@dimen/regular1"
-        android:paddingVertical="@dimen/regular1"
-        android:fontFamily="@font/opensans_bold"/>
+            <Button
+                android:id="@+id/btncapthett"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cấp thẻ bạn đọc"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnthuhoithett"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thu hồi thẻ bạn đọc"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btncapnhatthongtinbdtt"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cập nhật thông tin bạn đọc"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="gone"/>
 
->>>>>>> origin/Module3
+
+            <Button
+                android:id="@+id/btnlogout"
+                android:layout_marginTop="@dimen/regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng xuất"
+                android:textSize="@dimen/regular1"
+                android:paddingVertical="@dimen/regular1"
+                android:fontFamily="@font/opensans_bold"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

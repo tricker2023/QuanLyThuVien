@@ -3,6 +3,7 @@ package com.example.quanlythuvien;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,24 +11,69 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button managementBookCataloging,managementBookSummary,managementBooks;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Button btnMsTC,btnTsTC,btnDtTC,btnPsTC,btnDxTC;
-=======
-    private Button btncapthe, btnthuhoithe, btncapnhatthongtinbd;
+    private Button managementBookCataloging, managementBookSummary, managementBooks;
 
->>>>>>> origin/Module3
-=======
-    private Button btnxemThongtin,btndangkyms,btntrasach,btnthanhtoan,btnlogout;
->>>>>>> origin/Module4
+    private Button btnMsTC, btnTsTC, btnDtTC, btnPsTC;
+    private Button btncapthe, btnthuhoithe, btncapnhatthongtinbd;
+    private Button btnxemThongtin, btndangkyms, btntrasach, btnthanhtoan, btnlogout;
+    private SharedPreferences sharedPreferences;
+    private String position;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Init();
+        setViewInPosition();
         onClickChangePage();
     }
+
+    private void setViewInPosition() {
+        if(position.equals("Thủ kho sách")){
+            managementBookCataloging.setVisibility(View.VISIBLE);
+            managementBooks.setVisibility(View.VISIBLE);
+            managementBookSummary.setVisibility(View.VISIBLE);
+        }else if(position.equals("Thủ thư")){
+            btnMsTC.setVisibility(View.VISIBLE);
+            btnTsTC.setVisibility(View.VISIBLE);
+            btnDtTC.setVisibility(View.VISIBLE);
+            btnPsTC.setVisibility(View.VISIBLE);
+        }else if(position.equals("Quản lí thẻ")){
+            btncapthe.setVisibility(View.VISIBLE);
+            btnthuhoithe.setVisibility(View.VISIBLE);
+            btncapnhatthongtinbd.setVisibility(View.VISIBLE);
+        }else{
+            btnxemThongtin.setVisibility(View.VISIBLE);
+            btndangkyms.setVisibility(View.VISIBLE);
+            btntrasach.setVisibility(View.VISIBLE);
+            btnthanhtoan.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void Init() {
+        sharedPreferences = getSharedPreferences("loginData",MODE_PRIVATE);
+        position = sharedPreferences.getString("Position","");
+        managementBookCataloging = findViewById(R.id.main_managementBookCataloging);
+        managementBookSummary = findViewById(R.id.main_managementBookSummary);
+        managementBooks = findViewById(R.id.main_managementBooks);
+
+        btnMsTC = findViewById(R.id.btnMsTC);
+        btnTsTC = findViewById(R.id.btnTsTC);
+        btnDtTC = findViewById(R.id.btnDtTC);
+        btnPsTC = findViewById(R.id.btnPsTC);
+
+
+        btncapthe = findViewById(R.id.btncapthett);
+        btnthuhoithe = findViewById(R.id.btnthuhoithett);
+        btncapnhatthongtinbd = findViewById(R.id.btncapnhatthongtinbdtt);
+
+        btnxemThongtin = findViewById(R.id.btnxemThongtin);
+        btndangkyms = findViewById(R.id.btndangkyms);
+        btntrasach = findViewById(R.id.btntrasach);
+        btnthanhtoan = findViewById(R.id.btnthanhtoan);
+        btnlogout = findViewById(R.id.btnlogout);
+    }
+
     private void onClickChangePage() {
         managementBookCataloging.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,8 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         //hàm xử lý sự kiện khi click vào nút quản lý mượn sách
         btnMsTC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //khai báo intent cho phép chuyển giao diện từ giao diện trang chủ đến giao diện quản lý trả sách
-                Intent myintent = new Intent(MainActivity.this,TrangChuQlyTraSach.class);
+                Intent myintent = new Intent(MainActivity.this, TrangChuQlyTraSach.class);
                 startActivity(myintent);
             }
         });
@@ -91,15 +136,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // hàm xử lý sự kiện khi click vào nút đăng xuất
-        btnDxTC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //khai báo intent cho phép chuyển giao diện từ giao diện trang chủ đến giao diện đăng nhâp
-                Intent myintent = new Intent(MainActivity.this, Login.class);
-                startActivity(myintent);
-                Toast.makeText(MainActivity.this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
-=======
+
         btncapthe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,8 +156,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CapNhatThongTinBanDocActivity.class);
                 startActivity(intent);
->>>>>>> origin/Module3
-=======
+            }
+        });
+
         // xu ly click button xem thong tin sach
         btnxemThongtin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,35 +196,11 @@ public class MainActivity extends AppCompatActivity {
         btnlogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
->>>>>>> origin/Module4
+                //khai báo intent cho phép chuyển giao diện từ giao diện trang chủ đến giao diện đăng nhâp
+                Intent myintent = new Intent(MainActivity.this, Login.class);
+                startActivity(myintent);
+                Toast.makeText(MainActivity.this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-
-    private void Init() {
-        managementBookCataloging = findViewById(R.id.main_managementBookCataloging);
-        managementBookSummary = findViewById(R.id.main_managementBookSummary);
-        managementBooks = findViewById(R.id.main_managementBooks);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        btnMsTC=findViewById(R.id.btnMsTC);
-        btnTsTC=findViewById(R.id.btnTsTC);
-        btnDtTC=findViewById(R.id.btnDtTC);
-        btnPsTC=findViewById(R.id.btnPsTC);
-        btnDxTC=findViewById(R.id.btnDxTC);
-=======
-        btncapthe = findViewById(R.id.btncapthett);
-        btnthuhoithe = findViewById(R.id.btnthuhoithett);
-        btncapnhatthongtinbd = findViewById(R.id.btncapnhatthongtinbdtt);
->>>>>>> origin/Module3
-=======
-        btnxemThongtin = findViewById(R.id.btnxemThongtin);
-        btndangkyms = findViewById(R.id.btndangkyms);
-        btntrasach = findViewById(R.id.btntrasach);
-        btnthanhtoan = findViewById(R.id.btnthanhtoan);
-        btnlogout = findViewById(R.id.btnlogout);
->>>>>>> origin/Module4
     }
 }

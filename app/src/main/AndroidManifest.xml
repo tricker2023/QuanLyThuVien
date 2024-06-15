@@ -15,8 +15,6 @@
         android:theme="@style/Theme.QuanLyThuVien"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-<<<<<<< HEAD
             android:name=".XemThongTinPhat"
             android:exported="false" />
         <activity
@@ -39,7 +37,8 @@
             android:exported="false" />
         <activity
             android:name=".TrangChuQlyMuonSach"
-=======
+            android:exported="false" />
+        <activity
             android:name=".ThuHoiTheBanDocActivity"
             android:exported="false" />
         <activity
@@ -52,9 +51,6 @@
             android:name=".CapNhatThongTinBanDocActivity"
             android:exported="false" />
         <activity
-            android:name=".SQLHepler.ThemThongTinBanDoc"
->>>>>>> origin/Module3
-=======
             android:name=".ListViewSachActivity"
             android:exported="false" />
         <activity
@@ -68,13 +64,6 @@
             android:exported="false" />
         <activity
             android:name=".NhapMuonSachActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DangKyMuonSachActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GiaoDienBanDocActivity"
->>>>>>> origin/Module4
             android:exported="false" />
         <activity
             android:name=".BookSummaryManagement"
