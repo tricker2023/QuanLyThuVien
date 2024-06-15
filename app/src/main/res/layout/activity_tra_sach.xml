@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".TraSachActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/regular3">
+        <ImageButton
+            android:id="@+id/btnback"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:paddingLeft="@dimen/regular1"
+            android:paddingTop="@dimen/regular4"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/chevron_left"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:text="TRẢ SÁCH"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:layout_gravity="center"
+            android:textSize="@dimen/title3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/regular1"
+        android:textAlignment="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/regular1"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtidtrasach"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_input"
+                        android:ems="10"
+                        android:hint="Mã trả sách"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:textColorHint="@color/text"
+                        android:textSize="@dimen/regular2" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/regular1"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtidbd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_input"
+                        android:ems="10"
+                        android:hint="Mã bạn đọc"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:textColorHint="@color/text"
+                        android:textSize="@dimen/regular2" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/regular1"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtmasach"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_input"
+                        android:ems="10"
+                        android:hint="Mã sách"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:textColorHint="@color/text"
+                        android:textSize="@dimen/regular2" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/regular1"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtbms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_input"
+                        android:ems="10"
+                        android:hint="Mã biên mục sách"
+                        android:inputType="text"
+                        android:maxLength="11"
+                        android:textColorHint="@color/text"
+                        android:textSize="@dimen/regular2" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/regular1"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtmams"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_input"
+                        android:ems="60"
+                        android:hint="Mã mượn sách"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:textColorHint="@color/text"
+                        android:textSize="@dimen/regular2" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--            Code tạo text view để chuyển đổi ngày tháng của trả sách-->
+                <TextView
+                    android:id="@+id/edtthoigiantra"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="@dimen/regular1"
+                    android:background="@drawable/background_input"
+                    android:drawableEnd="@drawable/datetime"
+                    android:text="Thời gian trả sách"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/regular2" />
+                <TextView
+                    android:id="@+id/edtngaytra"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="@dimen/regular1"
+                    android:background="@drawable/background_input"
+                    android:drawableEnd="@drawable/datetime"
+                    android:text="Ngày trả sách"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/regular2" />
+
+                <Button
+                    android:id="@+id/btnnhapts"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/regular1"
+                    android:background="@drawable/custom_button"
+                    android:hint="Nhập"
+                    android:textAlignment="center"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="25dp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

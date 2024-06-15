@@ -6,4 +6,5 @@
     <dimen name="regular1">18dp</dimen>
     <dimen name="regular2">16dp</dimen>
     <dimen name="regular3">14dp</dimen>
+    <dimen name="regular4">10dp</dimen>
 </resources>
