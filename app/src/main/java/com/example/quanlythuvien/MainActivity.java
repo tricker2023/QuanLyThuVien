@@ -11,7 +11,12 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button managementBookCataloging,managementBookSummary,managementBooks;
+<<<<<<< HEAD
     Button btnMsTC,btnTsTC,btnDtTC,btnPsTC,btnDxTC;
+=======
+    private Button btncapthe, btnthuhoithe, btncapnhatthongtinbd;
+
+>>>>>>> origin/Module3
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+<<<<<<< HEAD
         //hàm xử lý sự kiện khi click vào nút quản lý mượn sách
         btnMsTC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,18 +94,46 @@ public class MainActivity extends AppCompatActivity {
                 Intent myintent = new Intent(MainActivity.this, Login.class);
                 startActivity(myintent);
                 Toast.makeText(MainActivity.this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
+=======
+        btncapthe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CapTheBanDocActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnthuhoithe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ThuHoiTheBanDocActivity.class);
+                startActivity(intent);
+            }
+        });
+        btncapnhatthongtinbd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CapNhatThongTinBanDocActivity.class);
+                startActivity(intent);
+>>>>>>> origin/Module3
             }
         });
     }
+
 
     private void Init() {
         managementBookCataloging = findViewById(R.id.main_managementBookCataloging);
         managementBookSummary = findViewById(R.id.main_managementBookSummary);
         managementBooks = findViewById(R.id.main_managementBooks);
+<<<<<<< HEAD
         btnMsTC=findViewById(R.id.btnMsTC);
         btnTsTC=findViewById(R.id.btnTsTC);
         btnDtTC=findViewById(R.id.btnDtTC);
         btnPsTC=findViewById(R.id.btnPsTC);
         btnDxTC=findViewById(R.id.btnDxTC);
+=======
+        btncapthe = findViewById(R.id.btncapthett);
+        btnthuhoithe = findViewById(R.id.btnthuhoithett);
+        btncapnhatthongtinbd = findViewById(R.id.btncapnhatthongtinbdtt);
+>>>>>>> origin/Module3
     }
 }

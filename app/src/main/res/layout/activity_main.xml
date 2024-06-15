@@ -38,6 +38,7 @@
         android:paddingVertical="@dimen/regular1"
         android:fontFamily="@font/opensans_bold"/>
 
+<<<<<<< HEAD
 
 
 
@@ -116,4 +117,37 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:backgroundTint="@color/black" />
+=======
+    <Button
+        android:id="@+id/btncapthett"
+        android:layout_marginTop="@dimen/regular1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cấp thẻ bạn đọc"
+        android:textSize="@dimen/regular1"
+        android:paddingVertical="@dimen/regular1"
+        android:fontFamily="@font/opensans_bold"/>
+
+    <Button
+        android:id="@+id/btnthuhoithett"
+        android:layout_marginTop="@dimen/regular1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thu hồi thẻ bạn đọc"
+        android:textSize="@dimen/regular1"
+        android:paddingVertical="@dimen/regular1"
+        android:fontFamily="@font/opensans_bold"/>
+
+
+    <Button
+        android:id="@+id/btncapnhatthongtinbdtt"
+        android:layout_marginTop="@dimen/regular1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật thông tin bạn đọc"
+        android:textSize="@dimen/regular1"
+        android:paddingVertical="@dimen/regular1"
+        android:fontFamily="@font/opensans_bold"/>
+
+>>>>>>> origin/Module3
 </LinearLayout>
