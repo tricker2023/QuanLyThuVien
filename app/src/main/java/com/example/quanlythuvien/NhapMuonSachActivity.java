@@ -34,7 +34,7 @@ public class NhapMuonSachActivity extends AppCompatActivity{
 
     Calendar calendar = Calendar.getInstance();
     SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("hh:mm");
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +55,6 @@ public class NhapMuonSachActivity extends AppCompatActivity{
     }
     private void clickEditText(){
 
-        timeTextInputEditText.setText(simpleTimeFormat.format(calendar.getTime()));
-        date_timeTextInputEditText.setText(simpleDateFormat.format(calendar.getTime()));
 
         date_timeTextInputEditText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +113,7 @@ public class NhapMuonSachActivity extends AppCompatActivity{
                 String thoiGianMuon = timeTextInputEditText.getText().toString();
                 String tongNgayMuon = edtthoigianmuonms.getText().toString();
                 try {
-                    DangKyMuonSach.insertDangKy(maMS,maBD,maSach,maBienMucSach,ngayMuon,thoiGianMuon, tongNgayMuon);
+                    DangKyMuonSach.insertDangKy(maMS,maBD,maSach,maBienMucSach,thoiGianMuon,ngayMuon, tongNgayMuon);
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }

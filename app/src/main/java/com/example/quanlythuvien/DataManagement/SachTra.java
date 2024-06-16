@@ -1,5 +1,7 @@
 package com.example.quanlythuvien.DataManagement;
 
+import android.util.Log;
+
 import com.example.quanlythuvien.SQLHepler.SQLManagement;
 
 import java.sql.Connection;
@@ -22,6 +24,7 @@ public class SachTra {
         Statement statement = connection.createStatement(); // tạo đối tượng statement
         // Tạo câu lệnh thêm dữ liệu vào SQL Server
         String sql ="INSERT INTO THONGTINTRASACH(IDTRASACH,IDBANDOC,IdBooks,IdBookCataloging,IDTTMUONSACH,THOIGIANTRA,NgayTra) VALUES ('"+IDtraSach+"','"+IDbandoc+"','"+IDbooks+"','"+IDbookcataloging+"','"+IDttmuonsach+"','"+thoiGianTra+"','"+ngayTra+"')"; // tạo câu lệnh
+        Log.e("DATA",sql);
         statement.execute(sql); // khởi chạy câu lệnh sql
         statement.close(); // đóng statement
         connection.close();// đóng kết nói sql

@@ -24,12 +24,12 @@ public class TraSachActivity extends AppCompatActivity {
     // khai báo các id
     private TextView datetraSach,timeTextInputEditText;
     private ImageButton btnback;
-    private TextInputEditText edtidtrasach,edtidbd,edtmasach,edtbms,edtmams,edtthoigiantra,edtngaytra;
+    private TextInputEditText edtidtrasach,edtidbd,edtmasach,edtbms,edtmams;
     private Button btnnhapts;
 
     Calendar calendar = Calendar.getInstance();
     SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("hh:mm");
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy"); // hiển thị dữ liệu ngày tháng dưới dạng tháng , ngày ,năm
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd"); // hiển thị dữ liệu ngày tháng dưới dạng tháng , ngày ,năm
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +49,6 @@ public class TraSachActivity extends AppCompatActivity {
         });
     }
     private void clickEditText(){
-
-        timeTextInputEditText.setText(simpleTimeFormat.format(calendar.getTime()));
-        datetraSach.setText(simpleDateFormat.format(calendar.getTime()));
 
         datetraSach.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,13 +98,15 @@ public class TraSachActivity extends AppCompatActivity {
         btnnhapts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String masach = edtidtrasach.getText().toString();
+                timeTextInputEditText.setText(simpleTimeFormat.format(calendar.getTime()));
+                datetraSach.setText(simpleDateFormat.format(calendar.getTime()));
+                String masach = edtmasach.getText().toString();
                 String maTraSach = edtidtrasach.getText().toString();
                 String maBanDoc = edtidbd.getText().toString();
                 String maBienMucSach = edtbms.getText().toString();
                 String maMuonSach = edtmams.getText().toString();
-                String thoiGianTra = edtthoigiantra.getText().toString();
-                String ngayTra = edtngaytra.getText().toString();
+                String thoiGianTra = timeTextInputEditText.getText().toString();
+                String ngayTra = datetraSach.getText().toString();
                 if(maTraSach.length() == 0){
                     Toast.makeText(TraSachActivity.this, "Vui lòng nhập mã trả sách", Toast.LENGTH_SHORT).show();
                     edtidtrasach.requestFocus();
