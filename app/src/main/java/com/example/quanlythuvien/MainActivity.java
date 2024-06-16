@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             btnTsTC.setVisibility(View.VISIBLE);
             btnDtTC.setVisibility(View.VISIBLE);
             btnPsTC.setVisibility(View.VISIBLE);
+            btnthanhtoan.setVisibility(View.VISIBLE);
         }else if(position.equals("Quản lí thẻ")){
             btncapthe.setVisibility(View.VISIBLE);
             btnthuhoithe.setVisibility(View.VISIBLE);
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             btnxemThongtin.setVisibility(View.VISIBLE);
             btndangkyms.setVisibility(View.VISIBLE);
             btntrasach.setVisibility(View.VISIBLE);
-            btnthanhtoan.setVisibility(View.VISIBLE);
         }
     }
 

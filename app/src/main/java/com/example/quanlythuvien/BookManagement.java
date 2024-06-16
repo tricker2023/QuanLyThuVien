@@ -127,7 +127,7 @@ public class BookManagement extends AppCompatActivity {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        adapterBook = new AdapterBook(this,arrayList);
+        adapterBook = new AdapterBook(this,arrayList,false);
         listView.setAdapter(adapterBook);
         searchView = findViewById(R.id.bookManagement_searchView);
         searchView.clearFocus();

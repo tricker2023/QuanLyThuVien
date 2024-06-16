@@ -31,10 +31,12 @@ public class AdapterBook extends BaseAdapter {
     Context context;
     ArrayList<Books> arrayList;
     LayoutInflater layoutInflater;
-    public AdapterBook(Context context,ArrayList<Books> arrayList){ // hàm constructor
+    boolean Check;
+    public AdapterBook(Context context,ArrayList<Books> arrayList,boolean check){ // hàm constructor
         this.context = context;
         this.arrayList = arrayList;
         layoutInflater = LayoutInflater.from(context);
+        this.Check = check;
     }
 
     @Override
@@ -59,6 +61,9 @@ public class AdapterBook extends BaseAdapter {
         convertView = layoutInflater.inflate(R.layout.item_book_summary,null);
         TextView textView = convertView.findViewById(R.id.itemBookSummary_textView); // ánh xạ text view trong layout
         ImageButton imageButton = convertView.findViewById(R.id.itemBookSummary_imageButton); // ánh xạ imagebutton trong layout
+        if(Check){
+            imageButton.setVisibility(View.GONE);
+        }
 
         Books books = arrayList.get(position); // tạo đối tượng book
 

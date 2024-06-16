@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Chi tiết biên mục sách"
+            android:text="Chi tiết sách"
             android:textSize="@dimen/title3"
             android:fontFamily="@font/opensans_bold"
             android:gravity="start"/>

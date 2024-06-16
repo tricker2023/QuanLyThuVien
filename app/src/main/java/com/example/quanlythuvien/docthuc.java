@@ -81,7 +81,14 @@ public class docthuc extends AppCompatActivity {
                         if(vTraSach.getidSach().equals(MaSach) && vTraSach.getidBookCataloging().equals(MaBienMuc) && vTraSach.getidMuonSach().equals(MaMS)) {
                             BreakIterator id;
                             //khởi tạo câu lệnh sql thêm thông tin vào bảng ThongTinDocThuc
-                            String sqlThem = "insert into ThongTinDocThuc values ('" + idDocThuc.getText().toString() + "','" + idBanDocDT.getText().toString() + "','" + idSachDT.getText().toString() + "','" + idPhieuMuonDT.getText().toString() + "','" + idBienMucDT.getText().toString() + "','" + hanTraDT.getText().toString() + "','" + ghiChuDT.getText().toString() + "')";
+                            String sqlThem = "insert into ThongTinDocThuc values ('" +
+                                    idDocThuc.getText().toString() + "','" +
+                                    idBanDocDT.getText().toString() + "','" +
+                                    idSachDT.getText().toString() + "','" +
+                                    idBienMucDT.getText().toString() + "','" +
+                                    idPhieuMuonDT.getText().toString() + "','" +
+                                    hanTraDT.getText().toString() + "','" +
+                                    ghiChuDT.getText().toString() + "')";
                             //khởi tạo đối tượng statement
                             Statement st = connection.createStatement();
                             //thực thi câu lệnh sql

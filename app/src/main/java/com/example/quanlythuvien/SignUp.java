@@ -79,7 +79,6 @@ public class SignUp extends AppCompatActivity {
                 }else if(!passWords.equals(confirmPassword)){ // kiểm tra mật khẩu và xác nhận mật khẩu k giống nhau
                     Toast.makeText(SignUp.this, "Mật khẩu và mật khẩu xác nhận chưa đồng nhất", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
     }
@@ -91,8 +90,7 @@ public class SignUp extends AppCompatActivity {
                 changeToPageLogin(); // hàm chuyển màn hình đăng nhập
             }
         });
-    }
-    // hàm in ra set giá trị cho arraylist
+    }// hàm in ra set giá trị cho arraylist
     private void setArrayListPosition(){
         // thêm dữ liệu chức vụ
         arrayListPosition = new ArrayList<>();
@@ -101,6 +99,7 @@ public class SignUp extends AppCompatActivity {
         arrayListPosition.add("Quản lí thẻ");
         arrayListPosition.add("Bạn đọc");
     }
+
 
 
     private void Init() {
